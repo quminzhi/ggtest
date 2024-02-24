@@ -1,6 +1,8 @@
 #include <iostream>
-
 #include "calculator.h"
+#include "cirqueue.h"
+
+using namespace std;
 
 int run_app (int argc, char** argv) {
     if (argc < 0) {
@@ -19,5 +21,11 @@ int run_app (int argc, char** argv) {
     std::cout << "mul(10,4): " << calc.mul(10,4) << std::endl;
     std::cout << "div(10,4): " << calc.div(10,4) << std::endl;
     std::cout << "mod(10,4): " << calc.mod(10,4) << std::endl;
+
+    CirQueue que(10);
+    que.enqueue(1);
+    que.enqueue(2);
+    cout << que.dequeue() << endl;
+
     return 0;
 }

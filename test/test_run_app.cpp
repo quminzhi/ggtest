@@ -18,6 +18,6 @@ TEST(RunAppTest, RunApp) {
     std::cout.rdbuf(prevcoutbuf);
 
     // Check the output
-    std::string expected_output = "add(10,4): 14\nsub(10,4): 6\nmul(10,4): 40\ndiv(10,4): 2\nmod(10,4): 2\n";
+    std::string expected_output = "add(10,4): 14\nsub(10,4): 6\nmul(10,4): 40\ndiv(10,4): 2\nmod(10,4): 2\n1\n";
     ASSERT_EQ(buffer.str(), expected_output);
 }
