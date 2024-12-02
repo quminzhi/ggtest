@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(aa)
+project(qq)
 
 # import google test module
 enable_testing()
@@ -11,8 +11,8 @@ include(etc/cflags.cmake)
 
 add_subdirectory(src)
 
-add_executable(rooster main.cpp)
-target_link_libraries(rooster PRIVATE run_app)
+add_executable(qq main.cpp)
+target_link_libraries(qq PRIVATE run_app)
 
 add_subdirectory(test)
 
