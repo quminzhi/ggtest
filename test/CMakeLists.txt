@@ -2,6 +2,7 @@ include(AddGoogleTest) # under cmake directory
 
 add_executable(
   unit_tests
+  test_add.cpp
   test_calc.cpp
   test_cirqueue.cpp
   test_run_app.cpp
