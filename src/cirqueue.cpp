@@ -1,21 +1,19 @@
 #include "cirqueue.h"
 
 CirQueue::CirQueue(int capacity)
-    : array_(new int[capacity]),
-      front_(-1),
-      rear_(-1),
-      size_(0),
+    : array_(new int[capacity]), front_(-1), rear_(-1), size_(0),
       capacity_(capacity) {}
 
-CirQueue::CirQueue(const CirQueue& o)
-    : array_(new int[o.capacity_]), front_(o.front_), rear_(o.rear_), size_(o.size_), capacity_(o.capacity_) {
+CirQueue::CirQueue(const CirQueue &o)
+    : array_(new int[o.capacity_]), front_(o.front_), rear_(o.rear_),
+      size_(o.size_), capacity_(o.capacity_) {
   for (int i = 0; i < capacity_; ++i) {
     array_[i] = o.array_[i];
   }
 }
 
 // Implementation of the copy assignment operator
-CirQueue& CirQueue::operator=(const CirQueue& o) {
+CirQueue &CirQueue::operator=(const CirQueue &o) {
   if (this != &o) {
     // Deallocate existing array
     delete[] array_;
@@ -41,7 +39,7 @@ bool CirQueue::is_empty() const { return size_ == 0; }
 
 bool CirQueue::is_full() const { return size_ == capacity_; }
 
-void CirQueue::enqueue(const int& e) {
+void CirQueue::enqueue(const int &e) {
   if (is_full()) {
     std::cerr << "queue is full. cannot enqueue." << std::endl;
     exit(1);
